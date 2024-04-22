@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Overførsel </h3>
+
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> Fra konto: </label>
+            <input type="text" class="form-control" id="fromAccountId"
+                [(ngModel)]="transaction.fromAccountId" name="fromAccountId" placeholder="Indtast konto-nr.">
+        </div>
+
+        <div class="form-group">
+            <label> Til konto: </label>
+        
+            <input type="text" class="form-control" id="toAccountId"
+                [(ngModel)]="transaction.toAccountId" name="toAccountId" placeholder="Indtast konto-nr.">
+        </div>
+
+        <div class="form-group">
+            <label> Account ID </label>
+            <input type="text" class="form-control" id="transferAmount"
+                [(ngModel)]="transaction.transferAmount" name="transferAmount" placeholder="Beløb (DKK)">
+        </div>
+
+        <button class="btn btn-success" type="submit"> Overfør </button>
+
+    </form>
+</div>

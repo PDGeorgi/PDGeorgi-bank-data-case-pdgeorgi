@@ -1,0 +1,27 @@
+<h2> Overførsler </h2>
+
+<table class = "table table-striped">
+
+    <thead>
+        <tr>
+            <th> Fra konto </th>
+            <th> Indehaver </th>
+            <th> Ny balance </th>
+            <th> Overført beløb</th>
+            <th> Til konto </th>
+            <th> Indehaver </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let transaction of transactions">
+            <td> {{ transaction.fromAccountId }} </td>
+            <td> {{ transaction.fromName }} </td>
+            <td> {{ transaction.newBalance }} DKK </td>
+            <td> {{ transaction.transferAmount }} DKK </td>
+            <td> {{ transaction.toAccountId }} </td>
+            <td> {{ transaction.toName }} </td>
+        </tr>
+    </tbody>
+    
+</table>
